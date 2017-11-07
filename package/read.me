@@ -1,0 +1,77 @@
+The CamTracer Application readme
+Author: Stas Makutin, stas.makutin@gmail.com
+
+
+1. How it works.
+
+
+The application captures first frame and then applies "traces" of next frames 
+to it. The traces are determined by luminance change with Threshold parameter 
+applied. The Threshold parameter can accept values from 0 (apply next frame 
+as is) to 1.0 (not apply next frame at all). The found traces then blends with
+captured frame with Opacity parameter (0 - blend no traces, 1 - blend traces 
+over captured frame). The traces can be also painted by current color from 
+color set. The color mixes with trace using Color Opacity parameter 
+(0 - transparent, 1 - opaque).
+
+
+2. UI description
+
+
+* Change Camera button
+
+   Opens Select Camera dialog which allows to change active camera.
+   Hot key: Alt-C
+
+* Preview/Result button
+
+   Switches between camera preview and resulting image with traces 
+   (if available). Hot key: Alt-E
+
+* Start/Stop button
+
+   Starts/stops tracing. Hot keys: Alt-S, S
+
+* Reset button
+
+   Resets/deletes resulting image with traces. Hot key: Alt-R
+
+* Save Result button
+
+   Saves resulting image with traces into file. Hot key: Alt-V
+
+* Method drop down
+
+   Chooses one of two detection modes: 
+      Light On Dark - detects light traces on dark previous frame.
+      Dark On Light - detects dark traces on light previous frame.
+
+* Threshold control group
+
+   Sets traces luminance threshold.
+
+* Opacity control group
+
+   Sets traces opacity (0 - transparent, 1 - opaque).
+
+* Colors button
+
+   Opens Colors dialog to set up colors sequence and colors hot key. Hot key: Alt-L
+   IT is possible to select (make current) any color in the sequence.
+
+* Next Color button
+
+   Chooses next color in color sequence (cyclically). Hot keys: Alt-N, Space
+   Two color panels below Next Color button represents: 
+     left - current color; 
+     right - next color.
+                    
+
+* Color Opacity control group
+
+   Sets color opacity when it applies to traces.
+
+
+* Full screen mode
+
+   Double mouse click on image section or Alt-Enter hot key.
